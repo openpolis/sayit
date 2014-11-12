@@ -40,7 +40,6 @@ from speeches.models import (Speech, Speaker, Section,
 from speeches.widgets import AudioFileInput, DatePickerWidget, TimePickerWidget
 from speeches.importers.import_popolo import PopoloImporter
 
-
 logger = logging.getLogger(__name__)
 
 
@@ -637,3 +636,17 @@ class PopoloImportForm(forms.Form):
             )
 
         return cleaned_data
+
+
+class AkomaNtosoImportForm(forms.Form):
+    location = forms.URLField(label=_('Location of Akoma Ntoso data'))
+
+    existing_sections = forms.ChoiceField(
+        label=_('What would you like to do with existing sections?'),
+        choices=(
+            ('Skip', _('Skip them - keep them exactly as they are')),
+            ('Clobber', _('Replace them - throw away the existing data and use the new')),
+            ('Duplicate', _('Duplicate them - just make them again, leaving the old ones in place')),
+            ),
+        widget=forms.RadioSelect(),
+        )
