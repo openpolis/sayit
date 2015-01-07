@@ -182,7 +182,7 @@ class AkomaNtosoImportViewTestCase(InstanceTestCase):
     def test_import_page_smoke_test(self):
         resp = self.client.get('/import/akomantoso')
 
-        self.assertContains(resp, 'Import Speeches')
+        self.assertContains(resp, 'Import speeches')
 
     def test_import_data(self):
         resp = self.client.post(
