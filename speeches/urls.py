@@ -7,7 +7,7 @@ from speeches.views import (
     SpeakerView, SpeakerList, SectionCreate, SectionUpdate, SectionDelete,
     SectionView, SectionViewAN, ParentlessList, RecordingList, RecordingView,
     RecordingUpdate, RecordingAPICreate, InstanceView, Select2AutoResponseView,
-    PopoloImportView,
+    PopoloImportView, AkomaNtosoImportView,
     )
 
 from speeches.search import InstanceSearchView
