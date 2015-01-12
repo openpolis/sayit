@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Developement
+title: Development
 ---
 
 Development
